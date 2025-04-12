@@ -2,18 +2,20 @@ using System;
 
 class Program {
     static void Main(string[] args) {
-        double total = 0;
+        Console.Write("Sueldo mensual: ");
+        double sueldo = Convert.ToDouble(Console.ReadLine());
 
-        for (int i = 1; i <= 5; i++) {
-            Console.Write($"Producción día {i}: ");
-            total += Convert.ToDouble(Console.ReadLine());
-        }
+        double afp = sueldo * 0.0287;
+        double sfs = sueldo * 0.0304;
+        double isr = 0;
 
-        double promedio = total / 5;
-        string incentivo = promedio >= 20000 ? "3000" : "N/A";
+        if (sueldo > 34685) isr = sueldo * 0.15;
 
-        Console.WriteLine($"Total: {total}");
-        Console.WriteLine($"Promedio: {promedio}");
-        Console.WriteLine($"Incentivo: {incentivo}");
+        double neto = sueldo - afp - sfs - isr;
+
+        Console.WriteLine($"AFP: {afp:F2}");
+        Console.WriteLine($"SFS: {sfs:F2}");
+        Console.WriteLine($"ISR: {(isr > 0 ? isr.ToString("F2") : "N/A")}");
+        Console.WriteLine($"Sueldo neto: {neto:F2}");
     }
 }
