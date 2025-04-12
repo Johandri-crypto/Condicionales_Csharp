@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Sueldo: ");
+        double sueldo = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Número de hijos: ");
+        int hijos = Convert.ToInt32(Console.ReadLine());
+
+        double incentivo = hijos * 500;
+        double total = sueldo + incentivo;
+
+        Console.WriteLine($"Sueldo: {sueldo}");
+        Console.WriteLine($"Incentivo: {incentivo}");
+        Console.WriteLine($"Total con incentivo: {total}");
+    }
+}
+
