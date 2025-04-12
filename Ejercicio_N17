@@ -1,0 +1,19 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        double total = 0;
+
+        for (int i = 1; i <= 5; i++) {
+            Console.Write($"Producción día {i}: ");
+            total += Convert.ToDouble(Console.ReadLine());
+        }
+
+        double promedio = total / 5;
+        string incentivo = promedio >= 20000 ? "3000" : "N/A";
+
+        Console.WriteLine($"Total: {total}");
+        Console.WriteLine($"Promedio: {promedio}");
+        Console.WriteLine($"Incentivo: {incentivo}");
+    }
+}
