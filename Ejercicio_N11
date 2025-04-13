@@ -1,0 +1,17 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        Console.Write("Ingrese calificación: ");
+        int nota = Convert.ToInt32(Console.ReadLine());
+        string resultado;
+
+        if (nota >= 90 && nota <= 100) resultado = "Excelente";
+        else if (nota >= 80) resultado = "Muy bueno";
+        else if (nota >= 75) resultado = "Bueno";
+        else if (nota >= 70) resultado = "Regular";
+        else resultado = "Deficiente";
+
+        Console.WriteLine($"Resultado: {resultado}");
+    }
+}
