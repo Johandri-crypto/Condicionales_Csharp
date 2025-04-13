@@ -1,0 +1,21 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        Console.Write("Edad: ");
+        int edad = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Sexo (M/F): ");
+        string sexo = Console.ReadLine().ToUpper();
+
+        if (edad < 18) {
+            Console.WriteLine("No puede entrar.");
+        } else if (sexo == "F") {
+            Console.WriteLine("Entra gratis.");
+        } else if (sexo == "M") {
+            Console.WriteLine("Entra pagando.");
+        } else {
+            Console.WriteLine("Sexo no válido.");
+        }
+    }
+}
