@@ -1,0 +1,17 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        Console.Write("Sueldo actual: ");
+        double sueldo = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Porcentaje de aumento: ");
+        double porcentaje = Convert.ToDouble(Console.ReadLine());
+
+        double aumento = sueldo * (porcentaje / 100);
+        double nuevoSueldo = sueldo + aumento;
+
+        Console.WriteLine($"Sueldo anterior: {sueldo}");
+        Console.WriteLine($"Nuevo sueldo: {nuevoSueldo}");
+    }
+}
