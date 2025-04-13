@@ -1,0 +1,15 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        double suma = 0;
+
+        for (int i = 1; i <= 5; i++) {
+            Console.Write($"Ingrese número {i}: ");
+            suma += Convert.ToDouble(Console.ReadLine());
+        }
+
+        double promedio = suma / 5;
+        Console.WriteLine($"El promedio es: {promedio}");
+    }
+}
