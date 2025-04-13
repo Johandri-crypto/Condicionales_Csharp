@@ -1,0 +1,23 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        Console.Write("Ingrese pago por hora: ");
+        double pagoHora = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Ingrese horas trabajadas: ");
+        double horas = Convert.ToDouble(Console.ReadLine());
+
+        double sueldoBruto = pagoHora * horas;
+        double afp = sueldoBruto * 0.0287;
+        double sfs = sueldoBruto * 0.0304;
+        double descuentos = afp + sfs;
+        double sueldoNeto = sueldoBruto - descuentos;
+
+        Console.WriteLine($"Sueldo bruto: {sueldoBruto:F2}");
+        Console.WriteLine($"AFP: {afp:F2}");
+        Console.WriteLine($"SFS: {sfs:F2}");
+        Console.WriteLine($"Descuentos: {descuentos:F2}");
+        Console.WriteLine($"Sueldo neto: {sueldoNeto:F2}");
+    }
+}
