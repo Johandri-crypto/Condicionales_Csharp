@@ -1,0 +1,11 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        Console.Write("Ingrese un número: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        if (num % 2 == 0) Console.WriteLine("Es par");
+        else Console.WriteLine("Es impar");
+    }
+}
