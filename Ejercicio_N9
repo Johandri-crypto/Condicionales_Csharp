@@ -1,0 +1,17 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        Console.Write("Precio del artículo: ");
+        double precio = Convert.ToDouble(Console.ReadLine());
+        double descuento = 0;
+
+        if (precio >= 1000 && precio <= 5000) descuento = 0.03;
+        else if (precio <= 10000) descuento = 0.05;
+        else if (precio <= 15000) descuento = 0.08;
+        else if (precio <= 20000) descuento = 0.10;
+
+        double total = precio - (precio * descuento);
+        Console.WriteLine($"Total con descuento: {total}");
+    }
+}
